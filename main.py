@@ -6,4 +6,8 @@ app = Flask(__name__)
 def cek():
     return "Backend 2"
 
-app.run(host='0.0.0.0', port=8080)
+@app.route("/", methods=['GET'])
+def test():
+    return "WEB BACKEND APP"
+
+app.run(host='0.0.0.0', port=8080, threaded=True)
