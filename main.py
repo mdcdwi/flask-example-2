@@ -10,4 +10,8 @@ def cek():
 def test():
     return "WEB BACKEND APP"
 
+@app.route("/req", methods=['GET'])
+def req():
+    return "req brwa"
+
 app.run(host='0.0.0.0', port=8080, threaded=True)
